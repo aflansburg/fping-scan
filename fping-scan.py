@@ -10,9 +10,16 @@ fping -a -q -g <ip_addr>
 '''
 
 import os
+import time # this is for timing the subnet ping scan
 
 addr_list = []
 
+start = time.time()
+
 for addr in os.popen("fping -a -q -g 10.31.94.0/23"):
-    addr_list.append(addr)
-    print addr
+    if addr != '\n':
+        addr_list.append(addr)
+        print addr
+
+end = time.time()
+print ("Time elapsed: {0}".format(end-start) + " seconds")
