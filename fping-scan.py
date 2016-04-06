@@ -11,4 +11,8 @@ fping -a -q -g <ip_addr>
 
 import os
 
+addr_list = []
 
+for addr in os.popen("fping -a -q -g 10.31.94.0/23"):
+    addr_list.append(addr)
+    print addr
