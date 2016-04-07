@@ -1,4 +1,4 @@
-# H1 fping-scan
+#fping-scan
 
 Scan subnets with Python for hosts that are up. Useful in convoluted network DHCP scope schemas (like ours).
 Currently, this works on Mac OSx. I fully intend to see if this script will also work on Linux, whether or not
