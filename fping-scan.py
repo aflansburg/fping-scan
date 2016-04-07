@@ -29,9 +29,11 @@ start = time.time()
 for addr in os.popen("fping -a -q -g " + subnet):
     addr = addr.rstrip('\n')
     addr_list.append(addr)
-    print addr
 
+# sort ip addresses descending and print
 addr_list.sort()
+for ip in addr_list:
+    print ip
 
 # Simple counter to calculate time to find up hosts
 end = time.time()
