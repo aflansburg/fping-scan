@@ -10,15 +10,14 @@ it requires alterations to universalize it. Hmm, that is a word -- *universalize
   or you can `brew install python` although you might need to check here as there's some sorcery 
   involved --> [SORCERY](https://www.python.org/downloads/release/python-2711/)
   
-* fping, a nice take on the traditional `ping` command to be installed.
+* fping, a nice take on the traditional `ping` command to be installed --> [fping for Mac OSx](
+    How to install fping (on Mac OSx -- I'm on 10.11.3 El Capitan) from Terminal:
 
-How to install fping (on Mac OSx -- I'm on 10.11.3 El Capitan) from Terminal:
+    ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
 
-```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
+    ```brew install fping```
 
-```brew install fping```
+    If you have issues (as I did, with a "*cannot create link*" error, do this:
 
-If you have issues (as I did, with a "*cannot create link*" error, do this:
-
-```sudo chown your_username_here /usr/local/share/man/man8```
+    ```sudo chown your_username_here /usr/local/share/man/man8```
 
