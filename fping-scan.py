@@ -9,10 +9,16 @@ fping -a -q -g <ip_addr>
 
 '''
 
-import os
+import os, sys # import system goodies
 import time # this is for timing the subnet ping scan
 
-subnet = raw_input("Enter the subnet to scan with CIDR mask (ex. 192.168.1.0/24): ")
+# input subnet as argument
+
+if len(sys.argv) == 2:
+    subnet = str(sys.argv[1])
+
+else:
+    subnet = raw_input("Enter the subnet to scan with CIDR mask (ex. 192.168.1.0/24): ")
 
 addr_list = []
 
@@ -24,6 +30,8 @@ for addr in os.popen("fping -a -q -g " + subnet):
     addr = addr.rstrip('\n')
     addr_list.append(addr)
     print addr
+
+addr_list.sort()
 
 # Simple counter to calculate time to find up hosts
 end = time.time()
