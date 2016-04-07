@@ -10,7 +10,7 @@ it requires alterations to universalize it. Hmm, that is a word -- *universalize
   or you can `brew install python` although you might need to check here as there's some sorcery 
   involved --> [SORCERY](https://www.python.org/downloads/release/python-2711/)
   
-* fping, a nice take on the traditional `ping` command to be installed --> [fping for Mac OSx](
+* fping, a nice take on the traditional `ping` command:
     How to install fping (on Mac OSx -- I'm on 10.11.3 El Capitan) from Terminal:
 
     ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
