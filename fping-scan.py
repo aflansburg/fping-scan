@@ -12,12 +12,14 @@ fping -a -q -g <ip_addr>
 import os
 import time # this is for timing the subnet ping scan
 
+subnet = raw_input("Enter the subnet to scan with CIDR mask (ex. 192.168.1.0/24): ")
+
 addr_list = []
 
 # For command counter
 start = time.time()
 
-for addr in os.popen("fping -a -q -g 10.31.94.0/23"):
+for addr in os.popen("fping -a -q -g " + subnet):
     addr = addr.rstrip('\n')
     addr_list.append(addr)
     print addr
