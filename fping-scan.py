@@ -17,6 +17,7 @@ subnet = raw_input("Enter the subnet to scan with CIDR mask (ex. 192.168.1.0/24)
 addr_list = []
 
 # For command counter
+print ("Please wait while subnet {0} is scanned.".format(subnet))
 start = time.time()
 
 for addr in os.popen("fping -a -q -g " + subnet):
