@@ -1,12 +1,12 @@
 __author__ = 'misaflansb'
 
 '''
+## Fping Usage
 
 fping -a -q -g <ip_addr>
            -a = alive hosts
            -q = quiet
            -g = address + mask (for scanning subnets)
-
 '''
 
 import os, sys # import system goodies
@@ -14,43 +14,7 @@ import time # this is for timing the subnet ping scan
 import csv # for writing out the ip addresses that are up
 import re # regex
 
-# Uncomment this for scanning single subnets either by argument at command line or being prompted if no
-# argument supplied -- also comment code labeled part 2 below
-
-'''
-# input subnet as argument
-
-if len(sys.argv) == 2:
-    subnet = str(sys.argv[1])
-
-else:
-    subnet = raw_input("Enter the subnet to scan with CIDR mask (ex. 192.168.1.0/24): ")
-
-addr_list = []
-
-# For command counter
-print ("Please wait while subnet {0} is scanned.".format(subnet))
-start = time.time()
-
-for addr in os.popen("fping -a -q -g " + subnet):
-    addr = addr.rstrip('\n')
-    addr_list.append(addr)
-
-# sort ip addresses descending and print
-addr_list.sort()
-for ip in addr_list:
-    print ip
-
-# Simple counter to calculate time to find up hosts
-end = time.time()
-start = int(start)
-end = int(end)
-
-print ("Time elapsed: {0}".format(end-start) + " seconds")
-print ("Total number of hosts up in this subnet: {0}".format(len(addr_list)))
-'''
-
-# Batch subnet operation -- comment this out and uncomment previous block and Part 2 as well
+# Batch subnet operation
 
 subnet_batch = ['10.30.1.0/24', '10.31.4.0/24', '10.31.94.0/23' '10.31.82.0/24', '10.31.83.0/24',
                 '10.31.84.0/24', '10.66.0.0/24', '192.168.112.0/24', '192.168.113.0/24',

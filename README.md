@@ -1,8 +1,9 @@
 #fping-scan
 
-Scan subnets with Python for hosts that are up. Useful in convoluted network DHCP scope schemas (like ours).
-Currently, this works on Mac OSx. I fully intend to see if this script will also work on Linux, whether or not
-it requires alterations to universalize it. Hmm, that is a word -- *universalize*.
+Scan subnets with Python for hosts that are up. Will report up hosts by unique subnet at the end.
+Useful in convoluted network DHCP scope schemas (like ours).
+
+Currently, this is built for Mac OSx. I fully intend to tweak this for use on Linux as well.
 
 ### **Requires**
 -----------------
@@ -17,7 +18,7 @@ it requires alterations to universalize it. Hmm, that is a word -- *universalize
 
     ```brew install fping```
 
-    If you have issues (as I did, with a "*cannot create link*" error, do this:
+    If you have issues (as I did) with a "*cannot create link*" error, do this:
 
     ```sudo chown your_username_here /usr/local/share/man/man8```
 
